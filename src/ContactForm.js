@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import "./ContactForm.css";
 
 function ContactForm() {
-  const { register, handleSubmit, watch, errors } = useForm();
+  const { register, handleSubmit, errors } = useForm();
   const [tableData, setTableData] = useState([]);
   const [totalSalaries, setTotalSalaries] = useState(0);
 
@@ -71,6 +71,7 @@ function ContactForm() {
           inputRef={register({ required: true })}
           label="Name"
         />
+
         <TextField
           name="age"
           type="number"
@@ -81,7 +82,6 @@ function ContactForm() {
           })}
           label="Age"
         />
-
         {console.log(errors.age)}
         <TextField
           name="salary"
